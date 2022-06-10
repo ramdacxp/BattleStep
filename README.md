@@ -9,3 +9,11 @@ Goals could also go in the opposite direction: Don't drink too much coffee.
 And finally you are most likely **more committed** to your goals if those are shared with your friends. An extra motivation!
 
 To provide all this without any larger concerns regarding **data privacy**, user tracking and such, BattleStep does the following: Request as little data as possible (no email-address required, no real name), take your data and go (CSV export and permanent account wipe), revokable and transparent sharing of selected data with friends, option to self host everything, no ads.
+
+## Usage
+
+Not usable yet. Sorry. ;)
+
+## Development Setup
+
+Please refer to the README of the [frontend](frontend/README.md) and backend components.
