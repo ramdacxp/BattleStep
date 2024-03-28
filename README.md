@@ -2,6 +2,8 @@
 
 **Get motivated to reach your goals, step by step, every single day!**
 
+[![Last Commit](https://img.shields.io/gitea/last-commit/ramdacxp/BattleStep)](https://github.com/ramdacxp/BattleStep)
+
 You should have some goals. To do more or less of something. And to do this every single day - which sometimes can be a kind of battle. A typical battle of this kind, especially during a pandemic or when doing home-office, can be to reach your daily movement goal - or to be more concrete: walk 10.000 steps a day or 70.000 steps during the week.
 
 [**Don't break the chain!** ](https://lifehacker.com/jerry-seinfelds-productivity-secret-281626)
