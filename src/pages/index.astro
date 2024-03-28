@@ -1,12 +1,40 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import GitHub from "../assets/GitHub.astro";
+import Logo from "../assets/Logo.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to BattleStep">
-	<main>
-    <h1 class="font-light text-3xl mt-4 ml-4">Battle Step</h1>
-	</main>
+  <header
+    class="flex items-center justify-between border-b border-slate-400 py-4"
+  >
+    <div class="flex gap-2 ml-4">
+      <Logo class="w-10" />
+      <h1 class="font-light text-3xl">BattleStep</h1>
+    </div>
+    <div class="mr-4 italic text-slate-500 hidden md:block">
+      Get motivated to reach your goals, step by step, every single day!
+    </div>
+  </header>
+
+  <main class="m-4">
+    <p>Hello world!</p>
+  </main>
+
+  <footer class="bg-slate-500 text-slate-700 rounded-b-md p-4 border-t border-t-slate-700">
+    <div class="italic mb-2">
+      Get motivated to reach your goals, step by step, every single day!
+    </div>
+
+    <div class="flex items-center justify-between">
+      <div class="text-slate-700">Copyright &copy; 2024 Michael Hoser</div>
+
+      <div class="flex gap-1">
+        <div class="">Made with 🖤 on</div>
+        <GitHub class="w-6 fill-red-500" />
+      </div>
+    </div>
+  </footer>
 </Layout>
 
-<style>
-</style>
+<style></style>
