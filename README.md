@@ -5,12 +5,9 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/ramdacxp/BattleStep?logo=github&label=last%20update)
 ](https://github.com/ramdacxp/BattleStep)
 
-
-
-
 You should have some goals. To do more or less of something. And to do this every single day - which sometimes can be a kind of battle. A typical battle of this kind, especially during a pandemic or when doing home-office, can be to reach your daily movement goal - or to be more concrete: walk 10.000 steps a day or 70.000 steps during the week.
 
-[**Don't break the chain!** ](https://lifehacker.com/jerry-seinfelds-productivity-secret-281626)
+[**Don't break the chain!**](https://lifehacker.com/jerry-seinfelds-productivity-secret-281626)
 Every single day counts!
 
 Goals could also go in the opposite direction:
@@ -20,8 +17,8 @@ Goals could also go in the opposite direction:
 
 Others may be:
 
-* Drink some water. Regularly. At least half the ocean... :)
-* Keep up with learning Astro by updating this repo. Daily. ;)
+* Drink some water. Regularly. At least half the ocean...
+* Keep up with learning Astro by updating this repo. Daily.
 
 And finally you are most likely **more committed** to your goals if those are shared with your friends. An extra motivation!
 
@@ -35,7 +32,14 @@ Restarting this project during Easter holidays 2024.
 
 ## Development Setup
 
-Todo.
+* Install [Git](https://git-scm.com/downloads)
+* Install [Node.Js](https://nodejs.org/en/download)
+* Install [Visual Studio Code](https://code.visualstudio.com/download)
+* Clone the repo: `git clone https://github.com/ramdacxp/BattleStep.git`
+* Install packages: `npm install`
+* Start the frontend: `npm start`
+
+A detailed list on how this project was setup [can be found here](Setup.md).
 
 ## Feature list & progress
 
@@ -47,9 +51,3 @@ Todo.
 * [ ] Configure daily/weekly step goal
 * [ ] Show streak length
 * [ ] Public hosting (Domain?)
-
-## Links
-
-* [Github status badges](https://shields.io/badges/git-hub-last-commit)
-* [Astro Web Framework](https://astro.build/)
-* [Tailwind CSS](https://tailwindcss.com/) & [FlowBite](https://flowbite.com/)
