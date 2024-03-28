@@ -22,12 +22,15 @@ Others may be:
 
 And finally you are most likely **more committed** to your goals if those are shared with your friends. An extra motivation!
 
+
 To provide all this without any larger concerns regarding **data privacy**, user tracking and such, BattleStep does the following: Request as little data as possible (no email-address required, no real name), take your data and go (CSV export and permanent account wipe), revocable and transparent sharing of selected data with friends, option to self host everything, no ads.
 
 ## Usage
 
-**Not yet. Sorry!**
+![Screenshot](images/screenshot.jpg)
+
 Restarting this project during Easter holidays 2024.
+No real functionality until now.
 *Let's see...*
 
 ## Development Setup
@@ -44,7 +47,8 @@ A detailed list on how this project was setup [can be found here](Setup.md).
 ## Feature list & progress
 
 * [x] Cleanup old Angular version & fresh restart (3/2024)
-* [ ] Astro and Tailwind based site
+* [x] Astro and Tailwind based site
+* [ ] Deploy to GitHub pages
 * [ ] Prototype to use browser's local storage
 * [ ] Enter and store daily steps
 * [ ] List of daily steps per week
