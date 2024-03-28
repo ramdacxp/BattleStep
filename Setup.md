@@ -11,7 +11,7 @@ List of the (important) steps on how this project was set up. Kind of.
 
 ## Steps
 
-### Astro with Tailwind
+### Astro
 
 Created project with `npm create astro@latest` while keeping the old README and stuff.
 
@@ -23,6 +23,12 @@ Created project with `npm create astro@latest` while keeping the old README and 
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+### Add Tailwind
+
+```cmd
+npx astro add tailwind
+```
 
 ## Links
 
