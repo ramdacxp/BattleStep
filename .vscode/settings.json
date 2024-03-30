@@ -1,0 +1,16 @@
+{
+  "spellright.documentTypes": [
+    "astro",
+    "markdown",
+    "latex",
+    "plaintext"
+  ],
+  "spellright.language": [
+    "en"
+  ],
+  "spellright.parserByClass": {
+    "astro": {
+      "parser": "xml"
+    }
+  },
+}
