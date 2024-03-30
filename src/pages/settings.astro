@@ -8,7 +8,23 @@ import Layout from "../layouts/Layout.astro";
   <Header title="Settings"/>
 
   <main class="m-4">
-    <p>Hello settings!</p>
+    <h1>Local Data & Sync</h1>
+    <p>
+      By default, BattleStep stores all data locally, using a web browser feature called <i>Local Storage</i>.
+      Your data is <i>not</i> sent back to the web server and therefore <i>not synced</i> between different browsers or saved on any other location.
+    </p>
+    <p>
+      You can <i>opt-in</i> to sync your data by setting up a <i>sync-token</i>. All browsers with the same token will keep their data in sync. Here your data will be sent to our webserver and stored in a database. <b>Keep your sync-token secret!</b> Anybody with access to it can read and change your data.
+    </p>
+    <h2>Name</h2>
+    <p>
+      You can set a name here (no real name required) and BattleStep will greet you with it. Will use "You" instead.
+    </p>
+    <div class="flex gap-2">
+      <input type="text" placeholder="You">
+      <button>Update</button>
+    </div>
+
   </main>
 
   <Footer/>
