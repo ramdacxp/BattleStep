@@ -49,7 +49,7 @@ A detailed list on how this project was setup [can be found here](Setup.md).
 * [x] Cleanup old Angular version & fresh restart (3/2024)
 * [x] Astro and Tailwind based site
 * [ ] Deploy to GitHub pages
-* [ ] Prototype to use browser's local storage
+* [x] Prototype to use browser's local storage
 * [ ] Enter and store daily steps
 * [ ] List of daily steps per week
 * [ ] Configure daily/weekly step goal
