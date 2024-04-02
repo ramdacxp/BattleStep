@@ -1,0 +1,16 @@
+---
+// Static script in header: https://docs.astro.build/en/basics/astro-components/#the-component-script
+// Dynamic script: https://docs.astro.build/en/guides/client-side-scripts/#script-processing
+---
+
+<span id="settingsName">n/a</span>
+
+<script>
+  import { StorageGetName } from "../scripts/localStorage";
+
+  let name = StorageGetName();
+  console.log(`Name: ${name}`);
+
+  document.getElementById("settingsName")!.innerText = name;
+
+</script>

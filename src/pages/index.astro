@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import Name from "../components/Name.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -8,7 +9,9 @@ import Layout from "../layouts/Layout.astro";
   <Header />
 
   <main class="m-4">
-    <p>Hello world!</p>
+    <h1>Hello <Name/>!</h1>
+    <p>This is a test only</p>
+
   </main>
 
   <Footer />
