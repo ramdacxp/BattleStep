@@ -30,6 +30,33 @@ Created project with `npm create astro@latest` while keeping the old README and 
 npx astro add tailwind
 ```
 
+### Add FlowBite
+
+As [described here](https://flowbite.com/docs/getting-started/astro/#install-flowbite):
+
+```cmd
+npm install flowbite
+```
+
+Adapt `content` path and `plugins` in `tailwind.config.mjs`:
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    "./node_modules/flowbite/**/*.js", // <== add this
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("flowbite/plugin"), // <== and this
+  ],
+};
+```
+
 ## Links
 
 * [GitHub status badges](https://shields.io/badges/git-hub-last-commit)

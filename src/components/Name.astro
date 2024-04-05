@@ -3,14 +3,11 @@
 // Dynamic script: https://docs.astro.build/en/guides/client-side-scripts/#script-processing
 ---
 
-<span id="settingsName">n/a</span>
+<span id="settingsName"></span>
 
 <script>
   import { StorageGetName } from "../scripts/localStorage";
 
-  let name = StorageGetName();
-  console.log(`Name: ${name}`);
-
+  let name = StorageGetName() ?? "You";
   document.getElementById("settingsName")!.innerText = name;
-
 </script>

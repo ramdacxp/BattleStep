@@ -29,7 +29,8 @@ import Layout from "../layouts/Layout.astro";
     </p>
     <div class="flex gap-2">
       <input type="text" id="settingName" placeholder="Your Name" />
-      <button id="settingNameUpdate">Update</button>
+      <button id="settingNameUpdate" class="btn btn-default">Update</button>
+      <button id="settingNameClear" class="btn btn-danger">Clear</button>
     </div>
   </main>
 
@@ -37,10 +38,9 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <script>
-  import { StorageGetName, StorageSetName } from "../scripts/localStorage";
+  import { StorageClearName, StorageGetName, StorageSetName } from "../scripts/localStorage";
 
   let name = StorageGetName();
-  console.log(`Name: ${name}`);
   document.querySelector<HTMLFormElement>("#settingName")!.value = name;
 
   document
@@ -49,6 +49,13 @@ import Layout from "../layouts/Layout.astro";
       StorageSetName(
         document.querySelector<HTMLFormElement>("#settingName")!.value
       );
+    });
+
+  document
+    .querySelector<HTMLFormElement>("#settingNameClear")!
+    .addEventListener("click", () => {
+      StorageClearName();
+      document.querySelector<HTMLFormElement>("#settingName")!.value = "";
     });
 </script>
 
