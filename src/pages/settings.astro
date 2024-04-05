@@ -25,7 +25,7 @@ import Layout from "../layouts/Layout.astro";
     <h2>Name</h2>
     <p>
       You can set a name here (no real name required) and BattleStep will greet
-      you with it. Will use "You" instead.
+      you with it. Will use "You" if no name is set.
     </p>
     <div class="flex gap-2">
       <input type="text" id="settingName" placeholder="Your Name" />
@@ -38,25 +38,19 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <script>
-  import { StorageClearName, StorageGetName, StorageSetName } from "../scripts/localStorage";
+  import { DataStore } from "../scripts/DataStore";
+  import { FormHelper } from "../scripts/FormHelper";
 
-  let name = StorageGetName();
-  document.querySelector<HTMLFormElement>("#settingName")!.value = name;
+  const ds = new DataStore();
+  const elName = new FormHelper("settingName");
+  elName.set(ds.getName() ?? "");
 
-  document
-    .querySelector<HTMLFormElement>("#settingNameUpdate")!
-    .addEventListener("click", () => {
-      StorageSetName(
-        document.querySelector<HTMLFormElement>("#settingName")!.value
-      );
-    });
+  new FormHelper("settingNameUpdate").click(() => {
+    ds.setName(elName.get());
+  });
 
-  document
-    .querySelector<HTMLFormElement>("#settingNameClear")!
-    .addEventListener("click", () => {
-      StorageClearName();
-      document.querySelector<HTMLFormElement>("#settingName")!.value = "";
-    });
+  new FormHelper("settingNameClear").click(() => {
+    ds.clearName();
+    elName.set("");
+  });
 </script>
-
-<style></style>

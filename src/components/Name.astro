@@ -6,8 +6,8 @@
 <span id="settingsName"></span>
 
 <script>
-  import { StorageGetName } from "../scripts/localStorage";
+  import { DataStore } from "../scripts/DataStore";
 
-  let name = StorageGetName() ?? "You";
+  let name = new DataStore().getName() ?? "You";
   document.getElementById("settingsName")!.innerText = name;
 </script>
