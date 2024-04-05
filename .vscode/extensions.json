@@ -4,7 +4,8 @@
     "shd101wyy.markdown-preview-enhanced",
     "fcrespo82.markdown-table-formatter",
     "davidanson.vscode-markdownlint",
-    "ban.spellright"
+    "ban.spellright",
+    "jock.svg"
   ],
   "unwantedRecommendations": []
 }
