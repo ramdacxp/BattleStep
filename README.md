@@ -22,7 +22,6 @@ Others may be:
 
 And finally you are most likely **more committed** to your goals if those are shared with your friends. An extra motivation!
 
-
 To provide all this without any larger concerns regarding **data privacy**, user tracking and such, BattleStep does the following: Request as little data as possible (no email-address required, no real name), take your data and go (CSV export and permanent account wipe), revocable and transparent sharing of selected data with friends, option to self host everything, no ads.
 
 ## Usage

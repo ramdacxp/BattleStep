@@ -1,0 +1,26 @@
+<div
+  class="absolute w-full bottom-0 mb-4"
+  x-data="{ privacyConfirmation: $persist(true).as('privacy-confirmation') }"
+>
+  <div
+    class="container mx-auto bg-blue-200 rounded-md shadow-lg p-4 border-2 border-blue-900"
+    style="display: none;"
+    x-show="privacyConfirmation"
+    x-transition
+  >
+    <div class="flex items-center justify-between">
+      <div>
+        <h2 class="font-bold">Your Privacy Matters</h2>
+        <p>
+          This site stores your data locally in the browser or syncs it, if you
+          enabled this. No tracking or data sharing with 3rd parties.
+          <!-- Find all the details here. -->
+        </p>
+      </div>
+      <button
+        class="btn btn-default whitespace-nowrap ml-4"
+        @click="privacyConfirmation=false">That's OK</button
+      >
+    </div>
+  </div>
+</div>

@@ -57,11 +57,48 @@ export default {
 };
 ```
 
+### Add Alpine.js & Persist plugin
+
+```cmd
+npx astro add alpinejs
+npm install @alpinejs/persist
+npm install --save-dev @types/alpinejs__persist
+```
+
+adapt `astro.config.mjs`:
+
+```javascript
+import alpinejs from "@astrojs/alpinejs";
+
+export default defineConfig({
+  integrations: [
+    alpinejs({
+      entrypoint: "/src/alpine-entrypoint"
+    }),
+  ],
+});
+```
+
+add `src/alpine-entrypoint.ts`:
+
+```ts
+import type { Alpine } from 'alpinejs'
+import persist from '@alpinejs/persist'
+
+export default (Alpine: Alpine) => {
+    Alpine.plugin(persist)
+}
+```
+
 ## Links
 
 * [GitHub status badges](https://shields.io/badges/git-hub-last-commit)
 
 * [Astro Web Framework](https://astro.build/)
   * [Documentation](https://docs.astro.build)
-
-* [Tailwind CSS](https://tailwindcss.com/) & [FlowBite](https://flowbite.com/)
+  * [Integration](https://docs.astro.build/en/guides/integrations-guide/tailwind/) for [Tailwind CSS](https://tailwindcss.com/)  
+  * [Integration](https://docs.astro.build/en/guides/integrations-guide/alpinejs/) for [Alpine.js](https://alpinejs.dev/)
+    * Alpine [Persist plugin](https://alpinejs.dev/plugins/persist)
+* [FlowBite](https://flowbite.com/) with [install instructions for Tailwind CSS Astro - Flowbite](https://flowbite.com/docs/getting-started/astro/)
+  * Instead of FlowBite's [modal toggling](https://flowbite.com/docs/components/modal/) the Alpine directive [x-show](https://alpinejs.dev/directives/show) is used, as its state can be [persisted](https://alpinejs.dev/plugins/persist#custom-key).
+  * Other FlowBite JS methods can be used on demand.

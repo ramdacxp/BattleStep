@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-
+import alpinejs from "@astrojs/alpinejs";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
@@ -9,6 +9,9 @@ export default defineConfig({
       // allow nested CSS
       nesting: true,
       applyBaseStyles: false,
+    }),
+    alpinejs({
+      entrypoint: "/src/alpine-entrypoint"
     }),
   ],
 });

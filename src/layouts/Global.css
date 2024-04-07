@@ -24,47 +24,46 @@ main {
       @apply ring-4 outline-none ring-blue-400;
     }
   }
+}
 
-  /* buttonx {
+/* buttonx {
     @apply rounded-md px-3 mt-1 border border-transparent from-slate-500 to-slate-700 bg-gradient-to-br text-slate-300 shadow-sm;
   } */
 
-  .btn {
-    @apply block rounded-lg text-gray-100 border-0 font-medium px-4 py-2 text-center shadow-sm;
+.btn {
+  @apply block rounded-lg text-gray-100 border-0 font-medium px-4 py-2 text-center shadow-sm;
 
-    &:hover {
-      @apply text-white;
-    }
-
-    &:focus {
-      @apply ring-4 outline-none;
-    }
+  &:hover {
+    @apply text-white;
   }
 
-  .btn-default {
-    @apply bg-blue-800;
+  &:focus {
+    @apply ring-4 outline-none;
+  }
+}
 
-    &:hover {
-      @apply bg-blue-900;
-    }
+.btn-default {
+  @apply bg-blue-800;
 
-    &:focus {
-      @apply ring-blue-400;
-    }
+  &:hover {
+    @apply bg-blue-900;
   }
 
-  .btn-danger {
-    @apply bg-red-800;
+  &:focus {
+    @apply ring-blue-400;
+  }
+}
 
-    &:hover {
-      @apply bg-red-900;
-    }
+.btn-danger {
+  @apply bg-red-800;
 
-    &:focus {
-      @apply ring-red-400;
-    }
+  &:hover {
+    @apply bg-red-900;
   }
 
+  &:focus {
+    @apply ring-red-400;
+  }
 }
 
 @tailwind utilities;
