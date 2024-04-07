@@ -1,0 +1,54 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Privacy Statement">
+  <Header title="Privacy Statement" />
+  <main class="m-4">
+    <h1 class="my-4">Motivation</h1>
+    <p>
+      <strong>The privacy of your data is very important!</strong>
+    </p><p>
+      This website was created with this statement in mind.<br />
+      It is based on the following fundamental principles:
+    </p>
+    <ul>
+      <li>
+        We don't ask you for personal information unless we truly need it.
+      </li>
+      <li>We don't share your personal information with anyone else.</li>
+      <li>
+        We don't store personal information on our servers unless required for
+        the operation of our services.
+      </li>
+      <li>
+        You own your data at any time. We will transparently show you all your
+        personal information. You will have the option to export, import, and
+        delete this data.
+      </li>
+    </ul>
+    <h1 class="my-4">Local Data & Syncronization</h1>
+    <p>
+      By default, BattleStep stores all data locally, using a web browser
+      feature called <i>Local Storage</i>. Your data is <i>not</i> sent back to the
+      web server and therefore <i>not synced</i> between different browsers or saved
+      on any other location.
+    </p>
+    <p>
+      You can <i>opt-in</i> to sync your data between different browsers. If you
+      choose to sync your data, a unique <i>sync-token</i> will be created for you.
+      All web browsers with the same token will keep their data in sync. To enable
+      this sync-functionality your data needs to be sent to our servers and needs
+      to be stored in a database.
+    </p><p>
+      <u>Important:</u><br />
+      <b>Keep your sync-token secret!</b> Anybody with access to it can read, change,
+      and delete all related data.<br />
+      <b>And don't lose it!</b> We can't recover it (as we only store a checksum
+      of it).
+    </p>
+  </main>
+  <Footer />
+</Layout>
