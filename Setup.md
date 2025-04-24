@@ -24,11 +24,18 @@ Created project with `npm create astro@latest` while keeping the old README and 
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-### Add Tailwind
+### Add Tailwind v4
 
-```cmd
-npx astro add tailwind
-```
+Upgrading to Tailwind v4
+
+* remove all previous tailwind components (`npm uninstall xxx`) and references in code (`tailwind.config.mjs` is no longer used, `@astrojs/tailwind` is deprecated)
+* execute `npx astro add tailwind` (see [docs](https://docs.astro.build/en/guides/styling/#tailwind))
+* add `@import "tailwindcss";` to `src\layouts\Global.css`
+
+Add [Tailwind Forms Plugin](https://github.com/tailwindlabs/tailwindcss/discussions/15816#discussioncomment-12085950):
+
+* `npm i -D @tailwindcss/forms`
+* add `@plugin "@tailwindcss/forms";` to `src\layouts\Global.css`
 
 ### Add FlowBite
 
@@ -88,6 +95,14 @@ import persist from '@alpinejs/persist'
 export default (Alpine: Alpine) => {
     Alpine.plugin(persist)
 }
+```
+
+### Check for NPM updates
+
+Also checks for new major versions.
+
+```cmd
+npx npm-check-updates
 ```
 
 ## Links

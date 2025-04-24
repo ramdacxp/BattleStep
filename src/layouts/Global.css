@@ -1,5 +1,5 @@
-@tailwind base;
-@tailwind components;
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
 
 main {
 
@@ -73,5 +73,3 @@ main {
     @apply ring-red-400;
   }
 }
-
-@tailwind utilities;

@@ -1,5 +1,7 @@
 ---
 import GitHub from "../assets/GitHub.astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
@@ -11,7 +13,7 @@ import GitHub from "../assets/GitHub.astro";
 
   <div class="flex items-center justify-between">
     <div class="text-slate-700">
-      Copyright &copy; 2024 Michael Hoser<br>
+      Copyright &copy; 2024-{currentYear} RamdacXP<br>
       Impressum |
       <a href="/privacy" class="underline">Privacy Statement</a>
     </div>
