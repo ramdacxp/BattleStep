@@ -6,8 +6,6 @@
 <span id="settingsName"></span>
 
 <script>
-  import { DataStore } from "../scripts/DataStore";
-
-  let name = new DataStore().getName() ?? "You";
-  document.getElementById("settingsName")!.innerText = name;
+  import { settings } from "../scripts/BattleStepSettings";
+  document.getElementById("settingsName")!.innerText = settings.value?.name ?? "You";
 </script>

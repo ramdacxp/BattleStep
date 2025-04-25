@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import Modal from "../components/Modal.astro";
 import Name from "../components/Name.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -9,9 +10,53 @@ import Layout from "../layouts/Layout.astro";
   <Header />
 
   <main class="m-4">
-    <h1>Hello <Name />!</h1>
-    <p>This is a test only</p>
+    <h1>
+      <span>Hello</span>
+      <a
+        href="#"
+        data-modal-target="modal-set-name"
+        data-modal-toggle="modal-set-name"
+      >
+        <Name />
+      </a>
+      <span>!</span>
+    </h1>
+    <p>This website is currently under development. Please be patient.</p>
+
+    <Modal
+      id="modal-set-name"
+      title="Change your name"
+      accept="Ok"
+      cancel="Cancel"
+    >
+      <p class="text-base leading-relaxed text-gray-500">
+        You can set a name or nickname and we will greet you with it.
+      </p>
+      <input type="text" id="input-set-name" placeholder="Nickname" value="" />
+    </Modal>
   </main>
 
   <Footer />
 </Layout>
+
+<script>
+  import { settings } from "../scripts/BattleStepSettings";
+  // load name into form
+  (document.getElementById("input-set-name") as HTMLInputElement).value =
+    settings.value?.name ?? "You";
+
+  // save
+  document
+    .getElementById("modal-set-name-ok")
+    ?.addEventListener("click", () => {
+      const inputElement = document.getElementById(
+        "input-set-name",
+      ) as HTMLInputElement;
+      if (inputElement) {
+        const newName = inputElement.value;
+        settings.setKey("name", newName);
+
+        console.log("Name updated to:", newName);
+      }
+    });
+</script>

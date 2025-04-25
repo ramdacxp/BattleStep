@@ -26,11 +26,12 @@ Created project with `npm create astro@latest` while keeping the old README and 
 
 ### Add Tailwind v4
 
-Upgrading to Tailwind v4
+While upgrading to Tailwind v4, remove all previous tailwind components (`npm uninstall xxx`) and references in code (`tailwind.config.mjs` is no longer used, `@astrojs/tailwind` is deprecated).
 
-* remove all previous tailwind components (`npm uninstall xxx`) and references in code (`tailwind.config.mjs` is no longer used, `@astrojs/tailwind` is deprecated)
-* execute `npx astro add tailwind` (see [docs](https://docs.astro.build/en/guides/styling/#tailwind))
-* add `@import "tailwindcss";` to `src\layouts\Global.css`
+Add [Tailwind v4](https://docs.astro.build/en/guides/styling/#tailwind):
+
+* Execute `npx astro add tailwind`
+* Add `@import "tailwindcss";` to `src\layouts\Global.css`
 
 Add [Tailwind Forms Plugin](https://github.com/tailwindlabs/tailwindcss/discussions/15816#discussioncomment-12085950):
 
@@ -41,28 +42,16 @@ Add [Tailwind Forms Plugin](https://github.com/tailwindlabs/tailwindcss/discussi
 
 As [described here](https://flowbite.com/docs/getting-started/astro/#install-flowbite):
 
-```cmd
-npm install flowbite
-```
+* `npm install flowbite`
+* Add the 3 FlowBite statements after Tailwind to `src\layouts\Global.css`:
 
-Adapt `content` path and `plugins` in `tailwind.config.mjs`:
-
-```javascript
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
-    "./node_modules/flowbite/**/*.js", // <== add this
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("flowbite/plugin"), // <== and this
-  ],
-};
-```
+  ```css
+  @import "tailwindcss";
+  @plugin "@tailwindcss/forms";
+  @import "flowbite/src/themes/default";
+  @plugin "flowbite/plugin";
+  @source "../../node_modules/flowbite";
+  ```
 
 ### Add Alpine.js & Persist plugin
 
